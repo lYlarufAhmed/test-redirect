@@ -16,7 +16,7 @@
     const accessToken = urlParams.get("accessToken");
     if (window.location.href.includes("#")){
       
-      const newUrl = window.location.replace('#', '&')
+      const newUrl = window.location.href.replace('#', '&')
       console.log(newUrl)
       const qString = newUrl.split('?')[1]
       const urlParams = new URLSearchParams(qString);
