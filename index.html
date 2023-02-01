@@ -14,7 +14,7 @@
     const urlParams = new URLSearchParams(queryString);
     const destination = urlParams.get("destination");
     const accessToken = urlParams.get("accessToken");
-    if (window.location.includes("#")){
+    if (window.location.href.includes("#")){
       
       const newUrl = window.location.replace('#', '&')
       console.log(newUrl)
