@@ -14,6 +14,17 @@
     const urlParams = new URLSearchParams(queryString);
     const destination = urlParams.get("destination");
     const accessToken = urlParams.get("accessToken");
+    if (window.location.includes("#")){
+      
+      const newUrl = window.location.replace('#', '&')
+      console.log(newUrl)
+      const qString = newUrl.split('?')[1]
+      const urlParams = new URLSearchParams(qString);
+      const destination = urlParams.get("destination");
+      const accessToken = urlParams.get("access_token");
+      console.log('new logic', destination, accessToken)
+    }
+    
     console.log(queryString, destination, accessToken);
   </script>
 </html>
